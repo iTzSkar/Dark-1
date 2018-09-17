@@ -20,7 +20,7 @@ message.member.voiceChannel.join().catch(e => message.channel.send(e));
 
 client.on('guildMemberAdd', member => {
     var channel = member.guild.channels.find('id','480104765192273935')
-   channel.send('** __Welcome To Server Bello__ **')
+   channel.message.send('** __Welcome To Server Bello__ **')
 	if (!channel) return;
 }, 3000);
 
