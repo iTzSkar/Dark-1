@@ -13,7 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
- if(message.content.startsWith(prefix + "join")) {
+ if(message.content.startsWith(prefix + "savagejoin")) {
 message.member.voiceChannel.join().catch(e => message.channel.send(e));
 }
 });
