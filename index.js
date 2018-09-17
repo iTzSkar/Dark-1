@@ -1,14 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-console.log("Welcome Heno.");
- 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`**
-قد تكون نهاية اشياء بداية لأشياء أجمل :sparkles:...# 
-https://discord.gg/9rgF48U **`) 
+client.on('ready', () => {
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
+});
 
-}).catch(console.error)
-})
+client.on('guildMemberAdd', member => {
+    var channel = member.guild.channels.find('id','480104765192273935')
+    message.channel.send('** __Welcome To Server Bello__ **')
+	if (!channel) return;
+}, 3000);
+
 client.login(process.env.BOT_TOKEN);
